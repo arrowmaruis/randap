@@ -1,0 +1,67 @@
+
+                        <div x-data="{ step: 1 }" class="flex-grow mt-10 md:mt-0 md:pl-16 max-w-3xl space-y-6">
+                            <!-- Étape 1 -->
+                            <div x-show="step === 1">
+                                <!-- Contenu de l'étape 1 -->
+                                <div class="flex-grow mt-10 md:mt-0 md:pl-16 max-w-3xl space-y-6">
+                                    <h2 class="text-2xl font-semibold">Information personnelle</h2>
+                                    <div class="max-w-lg"><label class="nc-Label text-sm font-medium text-neutral-700 dark:text-neutral-300 ">Date de naissance</label><input class="block w-full input bg-primary-100 rounded-xl" type="date" value="1990-07-22"></div>
+                                    <div><label class="nc-Label text-sm font-medium text-neutral-700 dark:text-neutral-300 ">Ville de résidence</label><input class="block w-full input bg-primary-100 rounded-xl" type="text" value="Eden Tuan"></div>
+                                    <div>
+                                        <label class="nc-Label text-sm font-medium text-neutral-700 dark:text-neutral-300 ">Pays de résidence</label>
+                                        <select class="nblock w-full input bg-primary-100 rounded-xl">
+                                            <option selected>Sélectionner</option>
+                                            <option value="Male">Homme</option>
+                                            <option value="Female">Femme</option>
+                                        </select>
+                                    </div>
+                                    <div><label class="nc-Label text-sm font-medium text-neutral-700 dark:text-neutral-300 ">Nationalité</label><input class="block w-full input bg-primary-100 rounded-xl" type="text" value="Eden Tuan"></div>
+                                    <div><label class="nc-Label text-sm font-medium text-neutral-700 dark:text-neutral-300 ">Numéro de téléphone</label><input class="block w-full input bg-primary-100 rounded-xl" type="text" value="003 888 232"></div>
+                                
+                                  <!-- Bouton pour passer à l'étape suivante -->
+                                  <div class="pt-2">
+                                    <button x-on:click="step = 2" class="bg-primary-500 relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6 ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50">Suivant</button>
+                                </div>
+                                </div>
+                              
+                            </div>
+                        
+                            <!-- Étape 2 -->
+                            <div x-show="step === 2">
+                                <!-- Contenu de l'étape 2 -->
+                                <div class="flex-grow mt-10 md:mt-0 md:pl-16 max-w-3xl space-y-6">
+                                    <h2 class="text-2xl font-semibold">Votre cursus a notre dame</h2>
+                                    <div><label class="nc-Label text-sm font-medium text-neutral-700 dark:text-neutral-300 ">Classe entrée</label><select class="nblock w-full input bg-primary-100 rounded-xl"><option selected>Sélectionner</option><option value="Male">Homme</option><option value="Female">Femme</option></select></div>
+                                    <div><label class="nc-Label text-sm font-medium text-neutral-700 dark:text-neutral-300 ">Année entrée</label><select class="nblock w-full input bg-primary-100 rounded-xl"><option selected>Sélectionner</option><option value="Male">Homme</option><option value="Female">Femme</option></select></div>
+                                    <div><label class="nc-Label text-sm font-medium text-neutral-700 dark:text-neutral-300 ">Classe de sortie</label><select class="nblock w-full input bg-primary-100 rounded-xl"><option selected>Sélectionner</option><option value="Male">Homme</option><option value="Female">Femme</option></select></div>
+                                    <div><label class="nc-Label text-sm font-medium text-neutral-700 dark:text-neutral-300 ">Année de sortie</label><select class="nblock w-full input bg-primary-100 rounded-xl"><option selected>Sélectionner</option><option value="Male">Homme</option><option value="Female">Femme</option></select></div>
+                                    <div class="pt-2 flex justify-between">
+                                        <button x-on:click="step = 1" class="mr-2 bg-white relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6 ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-gray-400">Précédent</button>
+                                        <button x-on:click="step = 3" class="bg-primary-500 relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6 ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50">Suivant</button>
+                                    </div>
+                                </div>
+                                <!-- Boutons pour revenir à l'étape précédente ou passer à l'étape suivante -->
+                                
+                            </div>
+                        
+                            <!-- Étape 3 -->
+                            <div x-show="step === 3">
+                                <!-- Contenu de l'étape 3 -->
+                                <div class="flex-grow mt-10 md:mt-0 md:pl-16 max-w-3xl space-y-6">
+                                    <h2 class="text-2xl font-semibold">Votre parcours professionnel</h2>
+                                    <div><label class="nc-Label text-sm font-medium text-neutral-700 dark:text-neutral-300 ">Statuts Professionnels</label><select class="nblock w-full input bg-primary-100 rounded-xl"><option selected>Sélectionner</option><option value="Male">Homme</option><option value="Female">Femme</option></select></div>
+                                    <div><label class="nc-Label text-sm font-medium text-neutral-700 dark:text-neutral-300 ">Fonction actuelle</label><input class="block w-full input bg-primary-100 rounded-xl" type="text" value="New york, USA"></div>
+                                    <div><label class="nc-Label text-sm font-medium text-neutral-700 dark:text-neutral-300 ">Entreprise actuelle</label><input class="block w-full input bg-primary-100 rounded-xl" type="text" value="New york, USA"></div>
+                                    <div><label class="nc-Label text-sm font-medium text-neutral-700 dark:text-neutral-300 ">Niveau études</label><input class="block w-full input bg-primary-100 rounded-xl" type="text" value="New york, USA"></div>
+                                    <div><label class="nc-Label text-sm font-medium text-neutral-700 dark:text-neutral-300 ">Dernier diplôme</label><input class="block w-full input bg-primary-100 rounded-xl" type="text" value="New york, USA"></div>
+                                    <div><label class="nc-Label text-sm font-medium text-neutral-700 dark:text-neutral-300 ">Domaines d'expertise</label><input class="block w-full input bg-primary-100 rounded-xl" type="text" value="New york, USA"></div>
+                                    <div><label class="nc-Label text-sm font-medium text-neutral-700 dark:text-neutral-300 ">Secteurs activités</label><input class="block w-full input bg-primary-100 rounded-xl" type="text" value="New york, USA"></div>
+                                <!-- Bouton pour revenir à l'étape précédente -->
+                                <div class="pt-2">
+                                    <button x-on:click="step = 2" class="mr-2 bg-primary-500 relative h-auto inline-flex items-center justify-center rounded-full transition-colors text-sm sm:text-base font-medium px-4 py-3 sm:px-6 ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-6000 hover:bg-primary-700 text-neutral-50">Précédent</button>
+                                </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        

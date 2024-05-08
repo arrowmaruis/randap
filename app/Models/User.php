@@ -19,8 +19,12 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'address',
+        'phone',
+        'promotion_id',
         'password',
     ];
+
 
     /**
      * The attributes that should be hidden for serialization.
@@ -43,5 +47,19 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    // Dans le modèle User
+    public function profile()
+    {
+        return $this->hasOne(UserProfil::class);
+    }
+
+    // Dans le modèle UserProfil
+  
+    // Dans le modèle User
+    public function promotion()
+    {
+        return $this->belongsTo(Promotion::class);
     }
 }
