@@ -14,6 +14,8 @@ class RegistersCompoenent extends Component
 
     public $name;
     public $email;
+
+    public $sentEmail;
    
     public $password;
 
@@ -31,12 +33,14 @@ class RegistersCompoenent extends Component
         'email.email' => 'Veuillez saisir une adresse email valide.',
         'email.unique' => 'Cette adresse email est déjà utilisée.',
         'password.required' => 'Le champ mot de passe est requis.',
-        // 'password.confirmed' => 'La confirmation du mot de passe ne correspond pas.',
+        'password.confirmed' => 'La confirmation du mot de passe ne correspond pas.',
         'password.min' => 'Le mot de passe doit comporter au moins :min caractères.',
     ];
-    public function mount()
+    public function mount($sentEmail, $name)
     {
         $this->promotionsItems = \App\Models\Promotion::all();
+        $this->email = $sentEmail;
+        $this->name = $name;
     }
 
     public function render()

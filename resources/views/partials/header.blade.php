@@ -81,7 +81,7 @@
                     </div>
                     @guest
                     <a class="text-white btn bg-primary-500 hover:bg-primary-800 transition duration-150 rounded-md px-5 cursor-pointer"
-                        href="{{route('auth.signin')}}">S'inscrire</a>
+                        href="{{route('auth.signin')}}">Se connecter</a>
                     @endguest
                 </div>
                 <div class="lg:hidden"><button
@@ -107,7 +107,7 @@
                     </svg></button></div>
             <div>
                 <ul class="mobile-menu">
-                    <li class="mb-1 menu-item-has-children rounded-xl "><span class="menu-expand">+</span><a
+                    <li class="mb-1 menu-item-has-children rounded-xl "><a
                             class="block p-3 text-sm text-pgray-500 hover:bg-primary-50/50  hover:text-primary-500"
                             href="{{route('actuality.index')}}">Acceuil</a>
 
@@ -127,11 +127,13 @@
                             class="block p-3 text-sm text-pgray-500 hover:bg-primary-50/50  hover:text-primary-500"
                             href="/admin">Dashboard</a></li>
                 </ul>
-                <div class="mt-4 pt-6 border-t border-pgray-100"><a
+                <div class="mt-4 pt-6 border-t border-pgray-100">
+                    <a
                         class="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-primary-400 hover:bg-primary-500   text-white rounded"
-                        href="{{route('auth.signin')}}">S'inscrire</a><a
+                        href="{{route('auth.signin')}}">Se connecter</a>
+                        {{-- <a
                         class="block px-4 py-3 mb-2 text-xs text-center text-primary-500 hover:text-primary-700 font-semibold leading-none border border-primary-200 hover:border-primary-300 rounded"
-                        href="#">Se connecter</a></div>
+                        href="#">Se connecter</a></div> --}}
             </div>
 
         </nav>

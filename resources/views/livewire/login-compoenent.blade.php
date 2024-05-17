@@ -50,7 +50,7 @@
             </form>
             <p class="mt-10 text-center text-sm text-gray-500">Pas un membre?<a
                     class="font-semibold leading-6 text-primary-600 hover:text-primary-500 m-1"
-                    href="/signup">S'inscrire</a>
+                    href="{{route('auth.adhesionForm')}}">Faire une demande d'adhésion</a>
             </p>
         </div>
     </div>

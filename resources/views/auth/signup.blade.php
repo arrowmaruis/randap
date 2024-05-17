@@ -40,7 +40,7 @@
 <body class="__className_127116">
 
 
-    <livewire:RegistersCompoenent>
+    <livewire:RegistersCompoenent :sentEmail="$email"  :name="$name" >
 
     @livewireScripts
 

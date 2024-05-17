@@ -21,7 +21,8 @@ class UserResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
     protected static ?string $navigationLabel = 'Les Aderhants';
-    protected static ?string $navigationGroup = 'Les Aciens élèves';
+    protected static ?string $navigationGroup = 'L\'affiliation à l\'organisation';
+
 
     public static function form(Form $form): Form
     {
@@ -38,8 +39,8 @@ class UserResource extends Resource
                 TextColumn::make('id')->label('ID')->searchable(),
                 TextColumn::make('name')->label('Nom et prénom')->searchable(),
                 TextColumn::make('email')->label('Email')->searchable(),
-                TextColumn::make('profile.numero_telephone')->label('Numéro')->searchable(),
-                TextColumn::make('profile.ville_residence')->label('Ville residence')->searchable(),
+                // TextColumn::make('profile.numero_telephone')->label('Numéro')->searchable(),
+                // TextColumn::make('profile.ville_residence')->label('Ville residence')->searchable(),
                 ToggleIconColumn::make('statut')
                     ->onIcon('heroicon-s-lock-open')
                     ->offIcon('heroicon-o-lock-closed'),

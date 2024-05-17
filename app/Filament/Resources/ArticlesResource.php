@@ -57,6 +57,7 @@ class ArticlesResource extends Resource
 
                         TextInput::make('title')
                             ->label('Titre')
+                            
                             ->required()
                             ->maxLength(255),
 
