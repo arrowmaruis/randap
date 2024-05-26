@@ -1,15 +1,20 @@
 <?php
 
+use App\Models\User;
+use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\ActivityController;
-use App\Http\Controllers\ActualityController;
+
+use App\Http\Controllers\AdhesionController;
 use App\Http\Controllers\DonationController;
+use App\Http\Controllers\ActualityController;
+
 
 Route::get('/', function () {
-    // dd(auth()->user());
+   
     return view('welcome');
 })->name('welcome');
 
@@ -41,6 +46,5 @@ Route::get('/projet', [ActualityController::class, 'projet'])->name('about.proje
 Route::get('/actuality/{id_article}', [ActualityController::class, 'details'])->name('actuality.details');
 
 
-use App\Http\Controllers\AdhesionController;
 
 Route::get('/finalize-adhesion/{token}', [AdhesionController::class, 'finalize'])->name('finalize.adhesion');

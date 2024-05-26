@@ -26,7 +26,7 @@ class AccountController extends Controller
 
         if (!$userProfile || !$this->hasProfileDetails($userProfile)) {
             // Redirigez l'utilisateur ou afficher un message indiquant que le profil est incomplet
-            return redirect()->route('account.complete-profile');
+            return redirect()->route('account.yearbook');
         }
 
         return view('account.yearbook', ['userProfile' => $userProfile]);
