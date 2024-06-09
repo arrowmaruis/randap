@@ -32,7 +32,11 @@ Route::middleware(['auth'])->group(function () {
 // Routes accessibles uniquement aux utilisateurs non connectés
 Route::middleware(['guest'])->group(function () {
     Route::get('/signin', [AuthController::class, 'signin'])->name('auth.signin');
-    // Route::get('/signup', [AuthController::class, 'signup'])->name('auth.signup');
+    Route::get('/password-reset', [AuthController::class, 'PassReset'])->name('auth.reste');
+    Route::get('/reset-password/{token}', [AuthController::class, 'PasswordReset'])
+    ->where('token', '[A-Za-z0-9\.\-\/]+')
+    ->name('password.reset');
+
     Route::get('/adhesion-form', [AuthController::class, 'adhesionForm'])->name('auth.adhesionForm');
 });
 

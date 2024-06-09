@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AuthController extends Controller
 {
@@ -24,6 +25,20 @@ class AuthController extends Controller
         
         return view('auth.adhesion');
 
+    }
+
+    public  function PassReset():View{
+        return view('auth.password-reset');
+
+    }
+
+    public function  PasswordReset($token)
+    {
+        $email = DB::table('password_reset_tokens')->where('token', $token)->first()->email;
+
+        return view('auth.reset-password-token',[
+            'email' => $email
+        ]);
     }
     
     
